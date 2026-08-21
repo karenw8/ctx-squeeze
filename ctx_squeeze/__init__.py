@@ -1,5 +1,6 @@
 """Fit long documents and chat transcripts into an LLM context budget."""
 
+from ctx_squeeze.dedupe import dedupe_segments, jaccard, shingles
 from ctx_squeeze.segments import Segment, split_segments
 from ctx_squeeze.tokens import estimate_tokens, truncate_to_tokens
 
@@ -8,4 +9,7 @@ __all__ = [
     "split_segments",
     "estimate_tokens",
     "truncate_to_tokens",
+    "shingles",
+    "jaccard",
+    "dedupe_segments",
 ]
